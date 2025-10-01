@@ -11,7 +11,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 app_include_css = "quick_kanban.bundle.css"
-app_include_js = "kanban_view.bundle.js"
+app_include_js = ["kanban_view.bundle.js", ]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/quick_kanban/css/quick_kanban.css"
@@ -28,7 +28,10 @@ app_include_js = "kanban_view.bundle.js"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Kanban Board" : "public/js/kanban_highlight.js"}
+doctype_js = {"Kanban Board" : "public/js/kanban_highlight.js", 
+            "Project": "public/js/project.js",
+                }
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -226,7 +229,6 @@ doctype_js = {"Kanban Board" : "public/js/kanban_highlight.js"}
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
 fixtures = [
     {"dt":"Custom Field", "filters":[["module","=","Quick-Kanban"]]},
     {"dt":"Property Setter", "filters":[["module","=","Quick-Kanban"]]},

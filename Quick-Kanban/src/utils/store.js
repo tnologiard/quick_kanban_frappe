@@ -70,7 +70,10 @@ const store = createStore({
                     //CUSTOM FIELDS
                     let extraFields = []
                     if (state.config.ref_doctype === "Project") {
-                        extraFields = ["custom_imagen_portada"];
+                        extraFields = ["custom_imagen_portada","custom_nombre_vendedor", "custom_nombre_diseñador"];
+                    }
+                    else if (state.config.ref_doctype === "Job Card") {
+                        extraFields = ["custom_guia_de_trabajo"];
                     }
                     const extraFieldsResponse = await frappe.call({
                         method: "frappe.client.get_list",
@@ -222,7 +225,7 @@ function transformCard(keys, card, userInfoLookup) {
         }
         transformedCard['_assign'] = transformedAssign;
 
-        // console.log(transformedCard)
+        console.log(transformedCard)
         return transformedCard;
 
     } catch (e) {

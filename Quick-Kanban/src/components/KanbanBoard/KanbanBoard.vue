@@ -2,6 +2,7 @@
   <div class="kanban" ref="kanbanBoard">
     <KanbanColumn
       v-for="(column, columnIndex) in columns"
+      :key="column.name"
       :column="column"
       :columnIndex="columnIndex"
       :config="config"

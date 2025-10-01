@@ -21,32 +21,9 @@
                     />
 
             </a>
-            <!-- <a v-if="getDoctype() === 'job card'" :href="getUrl()" draggable="false">
-                <PdfPreview
-                    v-if="card.custom_guia_de_trabajo && card.custom_guia_de_trabajo.endsWith('.pdf')"
-                    :src="card.custom_guia_de_trabajo"
-                />
-                <img
-                    loading="lazy"
-                    :srcset="card.custom_guia_de_trabajo
-                        ? `${card.custom_guia_de_trabajo}?w=400 1x, ${card.custom_guia_de_trabajo}?w=800 2x`
-                        : '/files/default_project_image.jpg'"
-                    :src="card.custom_guia_de_trabajo || '/files/default_project_image.jpg'"
-                    alt="imagen"
-                    :style="{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'top',
-                        display: 'block',
-                    }"
-                    draggable="false"
-                    />
-
+            <a v-if="getDoctype() === 'job card'" :href="getUrl()" draggable="false">
+                <iframe :src="card.custom_guia_de_trabajo"  width="100%" height="250px"></iframe>
             </a>
-            <span class="card-title ellipsis drag" :title="card.custom_proyecto">
-                    {{ card.custom_proyecto }}
-            </span> -->
         </div>
         <div class="kanban-title-area pb-3 drag">
             <a :href="getUrl()" draggable="false">
@@ -55,6 +32,14 @@
                     {{ card[config.title_field] }}
                 </span>
             </a>
+            <br>
+            <span class="drag" style="font-weight: bold; font-style: italic; color: red;">
+                Vendedor: {{ card.custom_nombre_vendedor }}
+            </span>
+            <br>
+            <span v-if="card.custom_nombre_diseñador" class="drag" style="font-weight: bold; font-style: italic; color: blue; font-size: 10;">
+                Diseñador: {{ card.custom_nombre_diseñador }}
+            </span>
         </div>
          <div class="kanban-tags" :style="{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' }">
             <span v-for="tag in card.tags" :key="tag.tag_name"
@@ -129,7 +114,17 @@ function getHighlight(field) {
 }
 
 function getUrl() {
-    return '/app/' + props.config.ref_doctype.toLowerCase() + '/' + props.card.name
+    if(props.config.ref_doctype.toLowerCase() == "job card"){
+        const doctype = decodeURIComponent(props.config.ref_doctype)
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+        return '/app/' + doctype + '/' + props.card.name
+
+    }
+    else{
+        return '/app/' + props.config.ref_doctype.toLowerCase() + '/' + props.card.name
+
+    }
 }
 function getDoctype() {
     return props.config.ref_doctype.toLowerCase()
