@@ -44,13 +44,13 @@ const refreshKanbanBoard = (args) => {
 function drop(event) {
   const evt = event.event;
   if (evt.newIndex === -1) {
-    console.log("Dropped from index", evt.oldIndex);
+    // console.log("Dropped from index", evt.oldIndex);
   }
   if (evt.oldIndex === -1) {
     const card = columns.value[evt.to.id].cards.find(
       (item) => item.name === event.key
     );
-    console.log(card.name, ":", card[config.value.title_field]);
+    // console.log(card.name, ":", card[config.value.title_field]);
 
     store.dispatch("updateOrder", {
       fromColumn: evt.from.id,
@@ -59,6 +59,24 @@ function drop(event) {
       toIndex: evt.newIndex,
       card,
     });
+
+    // --------- Mover tarjeta al final de la columna ---------
+    const col = columns.value[evt.to.id];
+    const length = col.cards.length
+
+    // Primero removerla si estaba en esa columna
+    col.cards = col.cards.filter(c => c.name !== card.name);
+
+    // Insertarla al final
+    col.cards.push(card);
+
+    // // // Esto asegura que Vue detecte el cambio
+    // col.cards = [...col.cards];
+    
+    // Recargar doc si es el actual
+    if (window.cur_frm && cur_frm.doc.name === card.name) {
+      cur_frm.reload_doc();
+    }
   }
 }
 

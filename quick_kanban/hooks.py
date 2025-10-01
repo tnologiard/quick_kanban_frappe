@@ -227,3 +227,9 @@ doctype_js = {"Kanban Board" : "public/js/kanban_highlight.js"}
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {"dt":"Custom Field", "filters":[["module","=","Quick-Kanban"]]},
+    {"dt":"Property Setter", "filters":[["module","=","Quick-Kanban"]]},
+  
+
+]

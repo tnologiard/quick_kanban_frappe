@@ -67,13 +67,55 @@ const store = createStore({
                         userInfoLookup[user.name] = user.fullname
                     });
 
+                    //CUSTOM FIELDS
+                    let extraFields = []
+                    if (state.config.ref_doctype === "Project") {
+                        extraFields = ["custom_imagen_portada"];
+                    }
+                    const extraFieldsResponse = await frappe.call({
+                        method: "frappe.client.get_list",
+                        args: {
+                            doctype: state.config.ref_doctype,
+                            fields: ["name", ...extraFields],
+                            // filters: { name: ["in", projectNames] }
+                        }
+                    });
+                    const extraFieldsMap = {};
+                    extraFieldsResponse.message.forEach(doc => {
+                        extraFieldsMap[doc.name] = doc;
+                    });
+
+                    //TAGS
+                    const nameIndex = board.keys.findIndex(key => key === "name");
+                    const projectNames = board.values.map(card => card[nameIndex]);
+                    // console.log(projectNames)
+
+                    // 4️⃣ Traer los tags para todos los proyectos
+                    const tagsResponse = await frappe.call({
+                        method: 'quick_kanban.api.get_tags_for_projects',
+                        args: { project_names: JSON.stringify(projectNames) }
+                    });
+                    const allTags = tagsResponse.message || {};
+                    // console.log(allTags)
+
+
                     columns.forEach((column) => {
                         column.cards = [];
                         board.values.forEach((card) => {
                             if (card[fieldIndex] === column.column_name) {
                                 const transformedCard = transformCard(board.keys, card, userInfoLookup);
+                                
+                                // AGREGO LOS CUSTOM FIELDS A LA TARJETA
+                                if (extraFieldsMap[transformedCard.name]) {
+                                    Object.assign(transformedCard, extraFieldsMap[transformedCard.name]);
+                                }
+                                //AGREGO LOS TAGS A LA TARJETA
+                                transformedCard.tags = allTags[transformedCard.name] || [];
+
                                 column.cards.push(transformedCard);
                             }
+                            //sort by modified ASC
+                            column.cards.sort((a, b) => new Date(a.modified) - new Date(b.modified));
                         });
                     });
                     commit('SET_COLUMNS', columns);
@@ -179,6 +221,8 @@ function transformCard(keys, card, userInfoLookup) {
 
         }
         transformedCard['_assign'] = transformedAssign;
+
+        // console.log(transformedCard)
         return transformedCard;
 
     } catch (e) {

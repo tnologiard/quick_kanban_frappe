@@ -1,11 +1,76 @@
 <template>
     <div class="kanban-card drag">
+        <!-- Imagen de portada -->
+        <div>
+            <a v-if="getDoctype() === 'project'" :href="getUrl()" draggable="false">
+                <img
+                    loading="lazy"
+                    :srcset="card.custom_imagen_portada
+                        ? `${card.custom_imagen_portada}?w=400 1x, ${card.custom_imagen_portada}?w=800 2x`
+                        : '/files/default_project_image.jpg'"
+                    :src="card.custom_imagen_portada || '/files/default_project_image.jpg'"
+                    alt="imagen"
+                    :style="{
+                        width: '60%',
+                        height: '60%',
+                        objectFit: 'cover',
+                        objectPosition: 'top',
+                        display: 'block',
+                    }"
+                    draggable="false"
+                    />
+
+            </a>
+            <!-- <a v-if="getDoctype() === 'job card'" :href="getUrl()" draggable="false">
+                <PdfPreview
+                    v-if="card.custom_guia_de_trabajo && card.custom_guia_de_trabajo.endsWith('.pdf')"
+                    :src="card.custom_guia_de_trabajo"
+                />
+                <img
+                    loading="lazy"
+                    :srcset="card.custom_guia_de_trabajo
+                        ? `${card.custom_guia_de_trabajo}?w=400 1x, ${card.custom_guia_de_trabajo}?w=800 2x`
+                        : '/files/default_project_image.jpg'"
+                    :src="card.custom_guia_de_trabajo || '/files/default_project_image.jpg'"
+                    alt="imagen"
+                    :style="{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'top',
+                        display: 'block',
+                    }"
+                    draggable="false"
+                    />
+
+            </a>
+            <span class="card-title ellipsis drag" :title="card.custom_proyecto">
+                    {{ card.custom_proyecto }}
+            </span> -->
+        </div>
         <div class="kanban-title-area pb-3 drag">
             <a :href="getUrl()" draggable="false">
-                <span class="card-title ellipsis drag" :title="card[config.title_field]">
+                <!-- <span class="card-title ellipsis drag" :title="card[config.title_field]"> -->
+                <span class="card-title drag" :title="card[config.title_field]">
                     {{ card[config.title_field] }}
                 </span>
             </a>
+        </div>
+         <div class="kanban-tags" :style="{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' }">
+            <span v-for="tag in card.tags" :key="tag.tag_name"
+                :style="{
+                backgroundColor: tag.custom_color,
+                padding: '2px 8px',
+                borderRadius: '999px',
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                color: '#fff',
+                lineHeight: 1,
+                marginRight: '3px',
+                whiteSpace: 'nowrap'
+                }">
+                {{ tag.tag_name }}
+            </span>
         </div>
 
         <div v-for="field in config.fields" class="drag">
@@ -66,7 +131,9 @@ function getHighlight(field) {
 function getUrl() {
     return '/app/' + props.config.ref_doctype.toLowerCase() + '/' + props.card.name
 }
-
+function getDoctype() {
+    return props.config.ref_doctype.toLowerCase()
+}
 async function assignTo(card) {
     let args = window.cur_list.get_args()
     const assignToDialog = new frappe.ui.form.AssignToDialog({
