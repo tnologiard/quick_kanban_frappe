@@ -32,13 +32,21 @@
                     {{ card[config.title_field] }}
                 </span>
             </a>
-            <br>
-            <span class="drag" style="font-weight: bold; font-style: italic; color: red;">
+            <br v-if="card.custom_nombre_vendedor">
+            <span v-if="card.custom_nombre_vendedor" class="drag" style="font-weight: bold; font-style: italic; color: red;">
                 Vendedor: {{ card.custom_nombre_vendedor }}
             </span>
-            <br>
+            <br v-if="card.custom_nombre_diseñador">
             <span v-if="card.custom_nombre_diseñador" class="drag" style="font-weight: bold; font-style: italic; color: blue; font-size: 10;">
                 Diseñador: {{ card.custom_nombre_diseñador }}
+            </span>
+            <br v-if="card.project">
+            <span v-if="card.project" class="drag">
+                {{ card.project }}
+            </span>
+            <br v-if="card.item_name">
+            <span v-if="card.item_name" class="drag">
+                {{ card.item_name }}
             </span>
         </div>
          <div class="kanban-tags" :style="{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' }">

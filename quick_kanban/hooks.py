@@ -232,6 +232,11 @@ doctype_js = {"Kanban Board" : "public/js/kanban_highlight.js",
 fixtures = [
     {"dt":"Custom Field", "filters":[["module","=","Quick-Kanban"]]},
     {"dt":"Property Setter", "filters":[["module","=","Quick-Kanban"]]},
-  
+    {
+        "dt": "Kanban Board",
+        "filters": [
+            ["name", "in", ["Departamento Kanban","Planificacion Kanban"]]
+        ]
+    },
 
 ]

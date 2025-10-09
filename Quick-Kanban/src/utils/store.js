@@ -73,7 +73,7 @@ const store = createStore({
                         extraFields = ["custom_imagen_portada","custom_nombre_vendedor", "custom_nombre_diseñador"];
                     }
                     else if (state.config.ref_doctype === "Job Card") {
-                        extraFields = ["custom_guia_de_trabajo"];
+                        extraFields = ["custom_guia_de_trabajo","project", "item_name"];
                     }
                     const extraFieldsResponse = await frappe.call({
                         method: "frappe.client.get_list",
