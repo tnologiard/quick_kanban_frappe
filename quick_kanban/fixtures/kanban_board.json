@@ -2,6 +2,104 @@
  {
   "columns": [
    {
+    "column_name": "Sin Asignar",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Artesania",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Pintura",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Corte",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Herreria",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Medios Publicitarios",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Impresion",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Rotulacion",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Completado",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   }
+  ],
+  "custom_highlight_table": [],
+  "custom_highlighted_field": null,
+  "docstatus": 0,
+  "doctype": "Kanban Board",
+  "field_name": "custom_departamento_kanban",
+  "fields": null,
+  "filters": null,
+  "kanban_board_name": "Tarjeta de Trabajo Departamento",
+  "modified": "2025-10-14 08:58:00.687838",
+  "name": "Tarjeta de Trabajo Departamento",
+  "private": 0,
+  "reference_doctype": "Job Card",
+  "show_labels": 0
+ },
+ {
+  "columns": [
+   {
     "column_name": "Pre-Ventas",
     "indicator": "Gray",
     "order": "[]",
