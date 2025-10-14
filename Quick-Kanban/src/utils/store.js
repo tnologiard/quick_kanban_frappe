@@ -70,7 +70,7 @@ const store = createStore({
                     //CUSTOM FIELDS
                     let extraFields = []
                     if (state.config.ref_doctype === "Project") {
-                        extraFields = ["custom_imagen_portada","custom_nombre_vendedor", "custom_nombre_diseñador"];
+                        extraFields = ["custom_imagen_portada","custom_nombre_vendedor", "custom_nombre_diseñador","project_type"];
                     }
                     else if (state.config.ref_doctype === "Job Card") {
                         extraFields = ["custom_guia_de_trabajo","project", "item_name"];

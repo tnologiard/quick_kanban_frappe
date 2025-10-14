@@ -44,6 +44,10 @@
             <span v-if="card.project" class="drag">
                 {{ card.project }}
             </span>
+            <br v-if="card.project_type">
+            <span v-if="card.project_type" class="drag">
+                {{ card.project_type }}
+            </span>
             <br v-if="card.item_name">
             <span v-if="card.item_name" class="drag">
                 {{ card.item_name }}
