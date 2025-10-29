@@ -235,7 +235,7 @@ fixtures = [
     {
         "dt": "Kanban Board",
         "filters": [
-            ["name", "in", ["Departamento Kanban","Planificacion Kanban", "Tarjeta de Trabajo Departamento"]]
+            ["name", "in", ["Departamento Kanban", "Almacen Kanban", "Planificacion Kanban", "Tarjeta de Trabajo Departamento"]]
         ]
     },
 

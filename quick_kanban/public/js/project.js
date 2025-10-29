@@ -1,27 +1,51 @@
 frappe.ui.form.on('Project', {
-    refresh: function(frm) {
-        // Evitar que se duplique el botón al refrescar
-        if (!frm.custom_buttons_added) {
-            let $btn = frm.page.add_inner_button(__('Ir a Advertech'), function() {
-                window.location.href = '/app/advertech';
-            });
+    custom_imagen_portada: function(frm) {
+        const allowed = ['png', 'jpg', 'jpeg']; // extensiones permitidas
+        const file_url = frm.doc.custom_imagen_portada;
 
-            // Darle estilo al botón
-            $btn
-                .removeClass("btn-default")   // quitar estilo gris por defecto
-                .addClass("btn-primary")      // azul
-                .css({
-                    "background-color": "#ff5722", // naranja fuerte
-                    "color": "white",
-                    "font-weight": "bold",
-                    "border-radius": "8px"
+        if (file_url) {
+            const ext = file_url.split('.').pop().toLowerCase();
+            if (!allowed.includes(ext)) {
+                frappe.msgprint({
+                    title: __('Archivo no permitido'),
+                    // message: __('Solo se permiten imágenes PNG o JPG.'),
+                    indicator: 'red'
                 });
 
-            frm.custom_buttons_added = true;
+                // Obtener el nombre del archivo (basename)
+                const file_name = file_url.split('/').pop();
+
+                // Buscar y eliminar el archivo del File Manager
+                frappe.call({
+                    method: 'frappe.client.get_list',
+                    args: {
+                        doctype: 'File',
+                        filters: { file_name: file_name },
+                        fields: ['name']
+                    },
+                    callback: function(r) {
+                        if (r.message && r.message.length > 0) {
+                            const file_docname = r.message[0].name;
+                            frappe.call({
+                                method: 'frappe.client.delete',
+                                args: {
+                                    doctype: 'File',
+                                    name: file_docname
+                                },
+                                callback: function() {
+                                    console.log('Archivo eliminado:', file_docname);
+                                }
+                            });
+                        }
+                    }
+                });
+
+                // Limpiar el campo
+                frm.set_value('custom_imagen_portada', null);
+            }
         }
     },
     custom_vendedor: function(frm) {
-        console.log(frm)
         if (!frm.doc.custom_vendedor) {
             // Si el valor es vacío, limpiar los campos
             frm.set_value('custom_nombre_vendedor', '');
@@ -47,7 +71,6 @@ frappe.ui.form.on('Project', {
         }
     },   
     custom_diseñador: function(frm) {
-        console.log(frm)
         if (!frm.doc.custom_diseñador) {
             // Si el valor es vacío, limpiar los campos
             frm.set_value('custom_nombre_diseñador', '');
@@ -87,5 +110,6 @@ frappe.ui.form.on('Project', {
             // Guarda el documento inmediatamente sin pedir al usuario presionar "Save"
             frm.save('Update');  // o frm.save_or_update();
         }
-    }
+    },
+    
 });

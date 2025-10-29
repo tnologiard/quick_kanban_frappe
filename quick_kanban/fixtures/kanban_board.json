@@ -102,7 +102,7 @@
    {
     "column_name": "Pre-Ventas",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-0001\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -316,6 +316,59 @@
   "kanban_board_name": "Planificacion Kanban",
   "modified": "2025-10-09 11:57:50.510412",
   "name": "Planificacion Kanban",
+  "private": 0,
+  "reference_doctype": "Project",
+  "show_labels": 0
+ },
+ {
+  "columns": [
+   {
+    "column_name": "Pendiente",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Almacen Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Solicitud de materiales",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Almacen Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "En proceso",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Almacen Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Entregado",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Almacen Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   }
+  ],
+  "custom_highlight_table": [],
+  "custom_highlighted_field": null,
+  "docstatus": 0,
+  "doctype": "Kanban Board",
+  "field_name": "custom_almacen_kanban",
+  "fields": null,
+  "filters": null,
+  "kanban_board_name": "Almacen Kanban",
+  "modified": "2025-10-29 13:57:34.937168",
+  "name": "Almacen Kanban",
   "private": 0,
   "reference_doctype": "Project",
   "show_labels": 0
