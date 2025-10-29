@@ -238,5 +238,11 @@ fixtures = [
             ["name", "in", ["Departamento Kanban", "Almacen Kanban", "Planificacion Kanban", "Tarjeta de Trabajo Departamento"]]
         ]
     },
+    {
+        "dt": "Custom HTML Block",
+        "filters": [
+            ["name", "in", ["Kanban Boards"]]
+        ]
+    },
 
 ]
