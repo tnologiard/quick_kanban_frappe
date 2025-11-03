@@ -102,7 +102,7 @@
    {
     "column_name": "Pre-Ventas",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3034\",\n \"PROJ-3031\",\n \"PROJ-3033\",\n \"PROJ-3025\",\n \"PROJ-3032\",\n \"PROJ-3027\",\n \"PROJ-3024\",\n \"PROJ-3023\",\n \"PROJ-3020\",\n \"PROJ-3022\",\n \"PROJ-3021\"\n]",
+    "order": "[\n \"PROJ-3063\",\n \"PROJ-3056\",\n \"PROJ-3041\",\n \"PROJ-3040\",\n \"PROJ-3032\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -111,7 +111,7 @@
    {
     "column_name": "Ventas",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3060\",\n \"PROJ-3054\",\n \"PROJ-3061\",\n \"PROJ-3036\",\n \"PROJ-3034\",\n \"PROJ-3031\",\n \"PROJ-3046\",\n \"PROJ-3005\",\n \"PROJ-3037\",\n \"PROJ-3003\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -129,7 +129,7 @@
    {
     "column_name": "Levantamiento",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3030\",\n \"PROJ-3016\",\n \"PROJ-3015\",\n \"PROJ-3007\"\n]",
+    "order": "[\n \"PROJ-3015\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -138,7 +138,7 @@
    {
     "column_name": "Asignacion diseñador",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3022\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -147,7 +147,25 @@
    {
     "column_name": "Diseño",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3026\"\n]",
+    "order": "[\n \"PROJ-3042\",\n \"PROJ-3062\",\n \"PROJ-3050\"\n]",
+    "parent": "Departamento Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Guia de Trabajo",
+    "indicator": "Gray",
+    "order": null,
+    "parent": "Departamento Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Revision de Archivos",
+    "indicator": "Gray",
+    "order": null,
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -156,7 +174,7 @@
    {
     "column_name": "Lista de Materiales",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3029\",\n \"PROJ-3028\",\n \"PROJ-3006\",\n \"PROJ-3001\",\n \"PROJ-3019\",\n \"PROJ-3017\",\n \"PROJ-3018\",\n \"PROJ-3014\",\n \"PROJ-3012\",\n \"PROJ-3013\",\n \"PROJ-3009\",\n \"PROJ-3004\",\n \"PROJ-3008\",\n \"PROJ-3002\",\n \"PROJ-3011\",\n \"PROJ-3005\",\n \"PROJ-3003\"\n]",
+    "order": "[\n \"PROJ-3016\",\n \"PROJ-3057\",\n \"PROJ-3006\",\n \"PROJ-3018\",\n \"PROJ-3020\",\n \"PROJ-3021\",\n \"PROJ-3055\",\n \"PROJ-3026\",\n \"PROJ-3045\",\n \"PROJ-3053\",\n \"PROJ-3044\",\n \"PROJ-3039\",\n \"PROJ-3052\",\n \"PROJ-3019\",\n \"PROJ-3048\",\n \"PROJ-3051\",\n \"PROJ-3049\",\n \"PROJ-3007\",\n \"PROJ-3033\",\n \"PROJ-3035\",\n \"PROJ-3025\",\n \"PROJ-3043\",\n \"PROJ-3014\",\n \"PROJ-3010\",\n \"PROJ-3001\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -165,7 +183,7 @@
    {
     "column_name": "Cotizacion",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3000\"\n]",
+    "order": "[\n \"PROJ-3058\",\n \"PROJ-3013\",\n \"PROJ-3023\",\n \"PROJ-3047\",\n \"PROJ-3017\",\n \"PROJ-3030\",\n \"PROJ-3012\",\n \"PROJ-3059\",\n \"PROJ-3000\",\n \"PROJ-3038\",\n \"PROJ-3028\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -174,7 +192,7 @@
    {
     "column_name": "Cotizacion Aprobada",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3029\",\n \"PROJ-3011\",\n \"PROJ-3024\",\n \"PROJ-3009\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -183,7 +201,16 @@
    {
     "column_name": "Orden de Venta",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3002\",\n \"PROJ-3008\",\n \"PROJ-3004\"\n]",
+    "parent": "Departamento Kanban",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Muestras de Color",
+    "indicator": "Gray",
+    "order": null,
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -201,7 +228,7 @@
    {
     "column_name": "Factura de Venta",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3027\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -219,7 +246,7 @@
    {
     "column_name": "Completado",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3010\"\n]",
+    "order": "[]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -234,7 +261,7 @@
   "fields": null,
   "filters": null,
   "kanban_board_name": "Departamento Kanban",
-  "modified": "2025-10-09 11:54:20.943490",
+  "modified": "2025-11-03 11:40:27.135714",
   "name": "Departamento Kanban",
   "private": 0,
   "reference_doctype": "Project",
@@ -245,7 +272,7 @@
    {
     "column_name": "Pendientes",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3000\"\n]",
+    "order": "[\n \"PROJ-3027\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -325,7 +352,7 @@
    {
     "column_name": "Pendiente",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3034\",\n \"PROJ-3031\",\n \"PROJ-3033\",\n \"PROJ-3029\",\n \"PROJ-3025\",\n \"PROJ-3032\",\n \"PROJ-3030\",\n \"PROJ-3028\",\n \"PROJ-3026\",\n \"PROJ-3027\",\n \"PROJ-3024\",\n \"PROJ-3006\",\n \"PROJ-3023\",\n \"PROJ-3001\",\n \"PROJ-3019\",\n \"PROJ-3010\",\n \"PROJ-3020\",\n \"PROJ-3022\",\n \"PROJ-3021\",\n \"PROJ-3016\",\n \"PROJ-3017\",\n \"PROJ-3018\",\n \"PROJ-3015\",\n \"PROJ-3014\",\n \"PROJ-3012\",\n \"PROJ-3013\",\n \"PROJ-3009\",\n \"PROJ-3004\",\n \"PROJ-3008\",\n \"PROJ-3002\",\n \"PROJ-3011\",\n \"PROJ-3007\",\n \"PROJ-3005\",\n \"PROJ-3003\"\n]",
+    "order": "[\n \"PROJ-3042\",\n \"PROJ-3060\",\n \"PROJ-3054\",\n \"PROJ-3061\",\n \"PROJ-3036\",\n \"PROJ-3063\",\n \"PROJ-3062\",\n \"PROJ-3016\",\n \"PROJ-3057\",\n \"PROJ-3059\",\n \"PROJ-3006\",\n \"PROJ-3018\",\n \"PROJ-3020\",\n \"PROJ-3021\",\n \"PROJ-3011\",\n \"PROJ-3015\",\n \"PROJ-3024\",\n \"PROJ-3022\",\n \"PROJ-3055\",\n \"PROJ-3056\",\n \"PROJ-3046\",\n \"PROJ-3005\",\n \"PROJ-3009\",\n \"PROJ-3026\",\n \"PROJ-3045\",\n \"PROJ-3053\",\n \"PROJ-3044\",\n \"PROJ-3027\",\n \"PROJ-3039\",\n \"PROJ-3008\",\n \"PROJ-3052\",\n \"PROJ-3050\",\n \"PROJ-3048\",\n \"PROJ-3051\",\n \"PROJ-3037\",\n \"PROJ-3049\",\n \"PROJ-3007\",\n \"PROJ-3033\",\n \"PROJ-3035\",\n \"PROJ-3025\",\n \"PROJ-3043\",\n \"PROJ-3003\",\n \"PROJ-3014\",\n \"PROJ-3010\",\n \"PROJ-3001\",\n \"PROJ-3041\",\n \"PROJ-3040\",\n \"PROJ-3032\"\n]",
     "parent": "Almacen Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -352,7 +379,7 @@
    {
     "column_name": "Entregado",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3058\",\n \"PROJ-3013\",\n \"PROJ-3023\",\n \"PROJ-3047\",\n \"PROJ-3017\",\n \"PROJ-3034\",\n \"PROJ-3031\",\n \"PROJ-3030\",\n \"PROJ-3012\",\n \"PROJ-3029\",\n \"PROJ-3000\",\n \"PROJ-3038\",\n \"PROJ-3002\",\n \"PROJ-3028\",\n \"PROJ-3004\",\n \"PROJ-3019\"\n]",
     "parent": "Almacen Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
