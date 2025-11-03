@@ -30,3 +30,22 @@ def get_tags_for_projects(project_names):
         })
 
     return result
+
+@frappe.whitelist()
+def get_tags_for_project(project_name):
+    """
+    Recibe el nombre de un proyecto y devuelve todos sus tags con custom_color.
+    """
+    # Consulta a la base de datos
+    query = """
+        SELECT t.name AS tag_name, t.custom_color
+        FROM `tabCustom Tag` ct
+        JOIN `tabTag` t ON t.name = ct.tag
+        WHERE ct.parent = %s AND ct.parenttype = 'Project'
+        ORDER BY t.name
+    """
+
+    tags = frappe.db.sql(query, project_name, as_dict=True)
+
+    # Retornar directamente la lista de tags
+    return tags

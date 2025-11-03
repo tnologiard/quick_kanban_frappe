@@ -52,11 +52,35 @@ const store = createStore({
             if (args === undefined) {
                 args = window.cur_list.get_args();
             }
+            // Agregar el campo custom_image
+            if (!args.fields.includes("`tabProject`.`custom_imagen_portada`")) {
+                args.fields.push("`tabProject`.`custom_imagen_portada`");
+            }
+            if (!args.fields.includes("`tabProject`.`custom_nombre_vendedor`")) {
+                args.fields.push("`tabProject`.`custom_nombre_vendedor`");
+            }
+            if (!args.fields.includes("`tabProject`.`custom_nombre_diseñador`")) {
+                args.fields.push("`tabProject`.`custom_nombre_diseñador`");
+            }
+            if (!args.fields.includes("`tabProject`.`project_type`")) {
+                args.fields.push("`tabProject`.`project_type`");
+            }
+
             try {
                 const response = await frappe.call({
                     method: 'frappe.desk.reportview.get',
                     args: args,
                 });
+
+                // TAGS
+                const nameIndex = response.message.keys.findIndex(key => key === "name");
+                const projectNames = response.message.values.map(card => card[nameIndex]);
+                const tagsResponse = await frappe.call({
+                    method: 'quick_kanban.api.get_tags_for_projects',
+                    args: { project_names: JSON.stringify(projectNames) }
+                });
+                const allTags = tagsResponse.message || {};
+                //
 
                 const board = response.message;
                 if (board.length !== 0) {
@@ -67,54 +91,15 @@ const store = createStore({
                         userInfoLookup[user.name] = user.fullname
                     });
 
-                    //CUSTOM FIELDS
-                    let extraFields = []
-                    if (state.config.ref_doctype === "Project") {
-                        extraFields = ["custom_imagen_portada","custom_nombre_vendedor", "custom_nombre_diseñador","project_type"];
-                    }
-                    else if (state.config.ref_doctype === "Job Card") {
-                        extraFields = ["custom_guia_de_trabajo","project", "item_name"];
-                    }
-                    const extraFieldsResponse = await frappe.call({
-                        method: "frappe.client.get_list",
-                        args: {
-                            doctype: state.config.ref_doctype,
-                            fields: ["name", ...extraFields],
-                            // filters: { name: ["in", projectNames] }
-                        }
-                    });
-                    const extraFieldsMap = {};
-                    extraFieldsResponse.message.forEach(doc => {
-                        extraFieldsMap[doc.name] = doc;
-                    });
-
-                    //TAGS
-                    const nameIndex = board.keys.findIndex(key => key === "name");
-                    const projectNames = board.values.map(card => card[nameIndex]);
-                    // console.log(projectNames)
-
-                    // 4️⃣ Traer los tags para todos los proyectos
-                    const tagsResponse = await frappe.call({
-                        method: 'quick_kanban.api.get_tags_for_projects',
-                        args: { project_names: JSON.stringify(projectNames) }
-                    });
-                    const allTags = tagsResponse.message || {};
-                    // console.log(allTags)
-
-
                     columns.forEach((column) => {
                         column.cards = [];
                         board.values.forEach((card) => {
                             if (card[fieldIndex] === column.column_name) {
                                 const transformedCard = transformCard(board.keys, card, userInfoLookup);
-                                
-                                // AGREGO LOS CUSTOM FIELDS A LA TARJETA
-                                if (extraFieldsMap[transformedCard.name]) {
-                                    Object.assign(transformedCard, extraFieldsMap[transformedCard.name]);
-                                }
+
                                 //AGREGO LOS TAGS A LA TARJETA
                                 transformedCard.tags = allTags[transformedCard.name] || [];
-
+                                
                                 column.cards.push(transformedCard);
                             }
                             //sort by modified ASC
@@ -224,8 +209,8 @@ function transformCard(keys, card, userInfoLookup) {
 
         }
         transformedCard['_assign'] = transformedAssign;
-
-        console.log(transformedCard)
+        
+        // console.log(transformedCard)
         return transformedCard;
 
     } catch (e) {
