@@ -52,19 +52,29 @@ const store = createStore({
             if (args === undefined) {
                 args = window.cur_list.get_args();
             }
-            // Agregar el campo custom_image
-            if (!args.fields.includes("`tabProject`.`custom_imagen_portada`")) {
-                args.fields.push("`tabProject`.`custom_imagen_portada`");
-            }
-            if (!args.fields.includes("`tabProject`.`custom_nombre_vendedor`")) {
-                args.fields.push("`tabProject`.`custom_nombre_vendedor`");
-            }
-            if (!args.fields.includes("`tabProject`.`custom_nombre_diseñador`")) {
-                args.fields.push("`tabProject`.`custom_nombre_diseñador`");
-            }
-            if (!args.fields.includes("`tabProject`.`project_type`")) {
-                args.fields.push("`tabProject`.`project_type`");
-            }
+            if (state.config.ref_doctype === "Project") {
+
+                // Agregar el campo custom_image
+                if (!args.fields.includes("`tabProject`.`custom_imagen_portada`")) {
+                    args.fields.push("`tabProject`.`custom_imagen_portada`");
+                }
+                if (!args.fields.includes("`tabProject`.`custom_nombre_vendedor`")) {
+                    args.fields.push("`tabProject`.`custom_nombre_vendedor`");
+                }
+                if (!args.fields.includes("`tabProject`.`custom_nombre_diseñador`")) {
+                    args.fields.push("`tabProject`.`custom_nombre_diseñador`");
+                }
+                if (!args.fields.includes("`tabProject`.`project_type`")) {
+                    args.fields.push("`tabProject`.`project_type`");
+                }
+             }
+             if (state.config.ref_doctype === "Job Card") {
+
+                // Agregar el campo custom_image
+                if (!args.fields.includes("`tabJob Card`.`custom_guia_de_trabajo`")) {
+                    args.fields.push("`tabJob Card`.`custom_guia_de_trabajo`");
+                }
+             }
 
             try {
                 const response = await frappe.call({
