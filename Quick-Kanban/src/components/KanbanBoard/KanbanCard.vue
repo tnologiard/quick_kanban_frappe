@@ -32,6 +32,14 @@
                     {{ card[config.title_field] }}
                 </span>
             </a>
+            <br v-if="card.custom_proyecto">
+            <span v-if="card.custom_proyecto" class="drag" style="font-weight: bold; font-style: italic; color: blue; font-size: 10;">
+                PROYECTO: {{ card.custom_proyecto }}
+            </span>
+            <br v-if="card.production_item">
+            <span v-if="card.production_item" class="drag" style="font-weight: bold; font-style: italic; color: red; font-size: 10;">
+                {{ card.production_item }}
+            </span>
             <br v-if="card.custom_nombre_vendedor">
             <span v-if="card.custom_nombre_vendedor" class="drag" style="font-weight: bold; font-style: italic; color: red;">
                 Vendedor: {{ card.custom_nombre_vendedor }}

@@ -74,6 +74,9 @@ const store = createStore({
                 if (!args.fields.includes("`tabJob Card`.`custom_guia_de_trabajo`")) {
                     args.fields.push("`tabJob Card`.`custom_guia_de_trabajo`");
                 }
+                if (!args.fields.includes("`tabJob Card`.`custom_proyecto`")) {
+                    args.fields.push("`tabJob Card`.`custom_proyecto`");
+                }
              }
 
             try {
