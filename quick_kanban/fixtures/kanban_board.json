@@ -4,7 +4,7 @@
    {
     "column_name": "Sin Asignar",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00118\",\n \"PO-JOB00117\",\n \"PO-JOB00116\",\n \"PO-JOB00115\",\n \"PO-JOB00114\",\n \"PO-JOB00113\",\n \"PO-JOB00073\",\n \"PO-JOB00029\",\n \"PO-JOB00028\",\n \"PO-JOB00027\",\n \"PO-JOB00026\",\n \"PO-JOB00025\",\n \"PO-JOB00024\",\n \"PO-JOB00023\",\n \"PO-JOB00022\",\n \"PO-JOB00021\",\n \"PO-JOB00020\",\n \"PO-JOB00019\",\n \"PO-JOB00018\",\n \"PO-JOB00016\",\n \"PO-JOB00015\",\n \"PO-JOB00014\"\n]",
+    "order": "[\n \"PO-JOB00335\",\n \"PO-JOB00323\",\n \"PO-JOB00315\",\n \"PO-JOB00277\",\n \"PO-JOB00273\",\n \"PO-JOB00260\",\n \"PO-JOB00237\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -13,7 +13,7 @@
    {
     "column_name": "Artesania",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00110\",\n \"PO-JOB00107\",\n \"PO-JOB00101\",\n \"PO-JOB00099\",\n \"PO-JOB00096\",\n \"PO-JOB00093\",\n \"PO-JOB00086\",\n \"PO-JOB00081\"\n]",
+    "order": "[\n \"PO-JOB00355\",\n \"PO-JOB00337\",\n \"PO-JOB00333\",\n \"PO-JOB00326\",\n \"PO-JOB00322\",\n \"PO-JOB00313\",\n \"PO-JOB00256\",\n \"PO-JOB00236\",\n \"PO-JOB00281\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -22,7 +22,7 @@
    {
     "column_name": "Pintura",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00100\",\n \"PO-JOB00098\",\n \"PO-JOB00095\",\n \"PO-JOB00092\",\n \"PO-JOB00085\"\n]",
+    "order": "[\n \"PO-JOB00276\",\n \"PO-JOB00334\",\n \"PO-JOB00327\",\n \"PO-JOB00314\",\n \"PO-JOB00240\",\n \"PO-JOB00262\",\n \"PO-JOB00029\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -31,7 +31,7 @@
    {
     "column_name": "Corte",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00017\",\n \"PO-JOB00111\",\n \"PO-JOB00102\",\n \"PO-JOB00097\",\n \"PO-JOB00094\",\n \"PO-JOB00091\",\n \"PO-JOB00084\",\n \"PO-JOB00080\"\n]",
+    "order": "[\n \"PO-JOB00354\",\n \"PO-JOB00336\",\n \"PO-JOB00332\",\n \"PO-JOB00328\",\n \"PO-JOB00325\",\n \"PO-JOB00321\",\n \"PO-JOB00312\",\n \"PO-JOB00275\",\n \"PO-JOB00239\",\n \"PO-JOB00235\",\n \"PO-JOB00268\",\n \"PO-JOB00255\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -40,7 +40,16 @@
    {
     "column_name": "Herreria",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00090\"\n]",
+    "order": "[\n \"PO-JOB00274\",\n \"PO-JOB00261\"\n]",
+    "parent": "Tarjeta de Trabajo Departamento",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Electricidad",
+    "indicator": "Gray",
+    "order": null,
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -49,7 +58,7 @@
    {
     "column_name": "Medios Publicitarios",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00089\"\n]",
+    "order": "[\n \"PO-JOB00341\",\n \"PO-JOB00263\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -58,7 +67,7 @@
    {
     "column_name": "Impresion",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00103\",\n \"PO-JOB00082\",\n \"PO-JOB00074\",\n \"PO-JOB00013\"\n]",
+    "order": "[\n \"PO-JOB00330\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -67,7 +76,7 @@
    {
     "column_name": "Rotulacion",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00112\",\n \"PO-JOB00105\",\n \"PO-JOB00088\",\n \"PO-JOB00083\",\n \"PO-JOB00075\"\n]",
+    "order": "[\n \"PO-JOB00343\",\n \"PO-JOB00331\",\n \"PO-JOB00329\",\n \"PO-JOB00324\",\n \"PO-JOB00316\",\n \"PO-JOB00259\",\n \"PO-JOB00257\",\n \"PO-JOB00254\",\n \"PO-JOB00252\",\n \"PO-JOB00238\",\n \"PO-JOB00282\",\n \"PO-JOB00279\",\n \"PO-JOB00272\",\n \"PO-JOB00270\",\n \"PO-JOB00267\",\n \"PO-JOB00265\",\n \"PO-JOB00028\",\n \"PO-JOB00022\",\n \"PO-JOB00014\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -76,7 +85,7 @@
    {
     "column_name": "Completado",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00078\",\n \"PO-JOB00077\",\n \"PO-JOB00076\",\n \"PO-JOB00079\",\n \"PO-JOB00033\",\n \"PO-JOB00109\",\n \"PO-JOB00106\",\n \"PO-JOB00072\",\n \"PO-JOB00108\",\n \"PO-JOB00104\",\n \"PO-JOB00087\"\n]",
+    "order": "[\n \"PO-JOB00353\",\n \"PO-JOB00352\",\n \"PO-JOB00351\",\n \"PO-JOB00350\",\n \"PO-JOB00349\",\n \"PO-JOB00348\",\n \"PO-JOB00347\",\n \"PO-JOB00346\",\n \"PO-JOB00342\",\n \"PO-JOB00345\",\n \"PO-JOB00344\",\n \"PO-JOB00311\",\n \"PO-JOB00024\",\n \"PO-JOB00075\",\n \"PO-JOB00112\",\n \"PO-JOB00083\",\n \"PO-JOB00107\",\n \"PO-JOB00310\",\n \"PO-JOB00309\",\n \"PO-JOB00021\",\n \"PO-JOB00016\",\n \"PO-JOB00018\",\n \"PO-JOB00020\",\n \"PO-JOB00340\",\n \"PO-JOB00339\",\n \"PO-JOB00338\",\n \"PO-JOB00264\",\n \"PO-JOB00033\",\n \"PO-JOB00318\",\n \"PO-JOB00317\",\n \"PO-JOB00293\",\n \"PO-JOB00284\",\n \"PO-JOB00287\",\n \"PO-JOB00306\",\n \"PO-JOB00023\",\n \"PO-JOB00013\",\n \"PO-JOB00295\",\n \"PO-JOB00096\",\n \"PO-JOB00081\",\n \"PO-JOB00308\",\n \"PO-JOB00304\",\n \"PO-JOB00111\",\n \"PO-JOB00253\",\n \"PO-JOB00258\",\n \"PO-JOB00251\",\n \"PO-JOB00017\",\n \"PO-JOB00027\",\n \"PO-JOB00307\",\n \"PO-JOB00233\",\n \"PO-JOB00019\",\n \"PO-JOB00320\",\n \"PO-JOB00319\",\n \"PO-JOB00095\",\n \"PO-JOB00094\",\n \"PO-JOB00082\",\n \"PO-JOB00080\",\n \"PO-JOB00283\",\n \"PO-JOB00286\",\n \"PO-JOB00285\",\n \"PO-JOB00305\",\n \"PO-JOB00294\",\n \"PO-JOB00278\",\n \"PO-JOB00271\",\n \"PO-JOB00269\",\n \"PO-JOB00266\",\n \"PO-JOB00292\",\n \"PO-JOB00291\",\n \"PO-JOB00290\",\n \"PO-JOB00289\",\n \"PO-JOB00288\",\n \"PO-JOB00234\",\n \"PO-JOB00299\",\n \"PO-JOB00301\",\n \"PO-JOB00300\",\n \"PO-JOB00297\",\n \"PO-JOB00296\",\n \"PO-JOB00298\",\n \"PO-JOB00089\",\n \"PO-JOB00302\",\n \"PO-JOB00303\",\n \"PO-JOB00093\",\n \"PO-JOB00092\",\n \"PO-JOB00091\",\n \"PO-JOB00090\",\n \"PO-JOB00224\",\n \"PO-JOB00074\",\n \"PO-JOB00280\",\n \"PO-JOB00215\",\n \"PO-JOB00121\",\n \"PO-JOB00220\",\n \"PO-JOB00218\",\n \"PO-JOB00105\",\n \"PO-JOB00139\",\n \"PO-JOB00231\",\n \"PO-JOB00216\",\n \"PO-JOB00026\",\n \"PO-JOB00117\",\n \"PO-JOB00219\",\n \"PO-JOB00217\",\n \"PO-JOB00221\",\n \"PO-JOB00098\",\n \"PO-JOB00099\",\n \"PO-JOB00086\",\n \"PO-JOB00222\",\n \"PO-JOB00110\",\n \"PO-JOB00250\",\n \"PO-JOB00249\",\n \"PO-JOB00247\",\n \"PO-JOB00225\",\n \"PO-JOB00223\",\n \"PO-JOB00140\",\n \"PO-JOB00073\",\n \"PO-JOB00114\",\n \"PO-JOB00115\",\n \"PO-JOB00116\",\n \"PO-JOB00118\",\n \"PO-JOB00248\",\n \"PO-JOB00246\",\n \"PO-JOB00245\",\n \"PO-JOB00244\",\n \"PO-JOB00243\",\n \"PO-JOB00242\",\n \"PO-JOB00226\",\n \"PO-JOB00228\",\n \"PO-JOB00232\",\n \"PO-JOB00230\",\n \"PO-JOB00025\",\n \"PO-JOB00015\",\n \"PO-JOB00214\",\n \"PO-JOB00120\",\n \"PO-JOB00119\",\n \"PO-JOB00229\",\n \"PO-JOB00133\",\n \"PO-JOB00134\",\n \"PO-JOB00136\",\n \"PO-JOB00135\",\n \"PO-JOB00113\",\n \"PO-JOB00213\",\n \"PO-JOB00212\",\n \"PO-JOB00211\",\n \"PO-JOB00210\",\n \"PO-JOB00209\",\n \"PO-JOB00208\",\n \"PO-JOB00207\",\n \"PO-JOB00206\",\n \"PO-JOB00205\",\n \"PO-JOB00204\",\n \"PO-JOB00203\",\n \"PO-JOB00202\",\n \"PO-JOB00201\",\n \"PO-JOB00200\",\n \"PO-JOB00199\",\n \"PO-JOB00198\",\n \"PO-JOB00197\",\n \"PO-JOB00196\",\n \"PO-JOB00195\",\n \"PO-JOB00194\",\n \"PO-JOB00193\",\n \"PO-JOB00192\",\n \"PO-JOB00191\",\n \"PO-JOB00190\",\n \"PO-JOB00189\",\n \"PO-JOB00188\",\n \"PO-JOB00187\",\n \"PO-JOB00186\",\n \"PO-JOB00185\",\n \"PO-JOB00184\",\n \"PO-JOB00183\",\n \"PO-JOB00182\",\n \"PO-JOB00181\",\n \"PO-JOB00180\",\n \"PO-JOB00179\",\n \"PO-JOB00085\",\n \"PO-JOB00084\",\n \"PO-JOB00097\",\n \"PO-JOB00103\",\n \"PO-JOB00178\",\n \"PO-JOB00177\",\n \"PO-JOB00176\",\n \"PO-JOB00175\",\n \"PO-JOB00174\",\n \"PO-JOB00173\",\n \"PO-JOB00172\",\n \"PO-JOB00149\",\n \"PO-JOB00148\",\n \"PO-JOB00147\",\n \"PO-JOB00146\",\n \"PO-JOB00145\",\n \"PO-JOB00144\",\n \"PO-JOB00143\",\n \"PO-JOB00142\",\n \"PO-JOB00141\",\n \"PO-JOB00160\",\n \"PO-JOB00159\",\n \"PO-JOB00158\",\n \"PO-JOB00157\",\n \"PO-JOB00156\",\n \"PO-JOB00155\",\n \"PO-JOB00154\",\n \"PO-JOB00153\",\n \"PO-JOB00152\",\n \"PO-JOB00151\",\n \"PO-JOB00150\",\n \"PO-JOB00171\",\n \"PO-JOB00170\",\n \"PO-JOB00169\",\n \"PO-JOB00168\",\n \"PO-JOB00167\",\n \"PO-JOB00166\",\n \"PO-JOB00165\",\n \"PO-JOB00164\",\n \"PO-JOB00163\",\n \"PO-JOB00162\",\n \"PO-JOB00161\",\n \"PO-JOB00138\",\n \"PO-JOB00137\",\n \"PO-JOB00132\",\n \"PO-JOB00131\",\n \"PO-JOB00130\",\n \"PO-JOB00129\",\n \"PO-JOB00128\",\n \"PO-JOB00127\",\n \"PO-JOB00126\",\n \"PO-JOB00125\",\n \"PO-JOB00122\",\n \"PO-JOB00123\",\n \"PO-JOB00106\",\n \"PO-JOB00109\",\n \"PO-JOB00108\",\n \"PO-JOB00072\",\n \"PO-JOB00104\",\n \"PO-JOB00088\",\n \"PO-JOB00062\",\n \"PO-JOB00066\",\n \"PO-JOB00068\",\n \"PO-JOB00070\",\n \"PO-JOB00038\",\n \"PO-JOB00041\",\n \"PO-JOB00043\",\n \"PO-JOB00045\",\n \"PO-JOB00047\",\n \"PO-JOB00030\",\n \"PO-JOB00034\",\n \"PO-JOB00032\",\n \"PO-JOB00036\",\n \"PO-JOB00050\",\n \"PO-JOB00052\",\n \"PO-JOB00053\",\n \"PO-JOB00055\",\n \"PO-JOB00058\",\n \"PO-JOB00060\",\n \"PO-JOB00051\",\n \"PO-JOB00054\",\n \"PO-JOB00056\",\n \"PO-JOB00057\",\n \"PO-JOB00059\",\n \"PO-JOB00061\",\n \"PO-JOB00063\",\n \"PO-JOB00064\",\n \"PO-JOB00065\",\n \"PO-JOB00067\",\n \"PO-JOB00069\",\n \"PO-JOB00071\",\n \"PO-JOB00039\",\n \"PO-JOB00040\",\n \"PO-JOB00042\",\n \"PO-JOB00044\",\n \"PO-JOB00046\",\n \"PO-JOB00048\",\n \"PO-JOB00049\",\n \"PO-JOB00031\",\n \"PO-JOB00035\",\n \"PO-JOB00037\",\n \"PO-JOB00078\",\n \"PO-JOB00077\",\n \"PO-JOB00076\",\n \"PO-JOB00079\",\n \"PO-JOB00087\"\n]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -85,7 +94,7 @@
    {
     "column_name": "Manuel Tolentino",
     "indicator": "Gray",
-    "order": "[\n \"PO-JOB00051\",\n \"PO-JOB00061\",\n \"PO-JOB00060\",\n \"PO-JOB00059\",\n \"PO-JOB00058\",\n \"PO-JOB00057\",\n \"PO-JOB00056\",\n \"PO-JOB00055\",\n \"PO-JOB00054\",\n \"PO-JOB00053\",\n \"PO-JOB00052\",\n \"PO-JOB00050\",\n \"PO-JOB00037\",\n \"PO-JOB00036\",\n \"PO-JOB00035\",\n \"PO-JOB00032\",\n \"PO-JOB00031\",\n \"PO-JOB00034\",\n \"PO-JOB00030\",\n \"PO-JOB00049\",\n \"PO-JOB00048\",\n \"PO-JOB00047\",\n \"PO-JOB00046\",\n \"PO-JOB00045\",\n \"PO-JOB00044\",\n \"PO-JOB00043\",\n \"PO-JOB00042\",\n \"PO-JOB00041\",\n \"PO-JOB00040\",\n \"PO-JOB00039\",\n \"PO-JOB00038\",\n \"PO-JOB00071\",\n \"PO-JOB00070\",\n \"PO-JOB00069\",\n \"PO-JOB00068\",\n \"PO-JOB00067\",\n \"PO-JOB00066\",\n \"PO-JOB00065\",\n \"PO-JOB00064\",\n \"PO-JOB00063\",\n \"PO-JOB00062\"\n]",
+    "order": "[]",
     "parent": "Tarjeta de Trabajo Departamento",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -100,7 +109,7 @@
   "fields": null,
   "filters": null,
   "kanban_board_name": "Tarjeta de Trabajo Departamento",
-  "modified": "2025-11-13 09:43:45.037809",
+  "modified": "2025-11-25 09:52:15.173518",
   "name": "Tarjeta de Trabajo Departamento",
   "private": 0,
   "reference_doctype": "Job Card",
@@ -111,7 +120,7 @@
    {
     "column_name": "Pre-Ventas",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3139\",\n \"PROJ-3137\",\n \"PROJ-3134\",\n \"PROJ-3131\",\n \"PROJ-3125\",\n \"PROJ-3021\",\n \"PROJ-3113\",\n \"PROJ-3041\"\n]",
+    "order": "[\n \"PROJ-3187\",\n \"PROJ-3190\",\n \"PROJ-3170\",\n \"PROJ-3194\",\n \"PROJ-3153\",\n \"PROJ-3038\",\n \"PROJ-3180\",\n \"PROJ-3142\",\n \"PROJ-3088\",\n \"PROJ-3147\",\n \"PROJ-3021\",\n \"PROJ-3113\",\n \"PROJ-3041\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -120,7 +129,7 @@
    {
     "column_name": "Ventas",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3022\",\n \"PROJ-3122\",\n \"PROJ-3116\",\n \"PROJ-3045\",\n \"PROJ-3135\",\n \"PROJ-3046\",\n \"PROJ-3051\",\n \"PROJ-3129\",\n \"PROJ-3108\",\n \"PROJ-3130\",\n \"PROJ-3124\",\n \"PROJ-3058\",\n \"PROJ-3088\",\n \"PROJ-3038\"\n]",
+    "order": "[\n \"PROJ-3051\",\n \"PROJ-3179\",\n \"PROJ-3175\",\n \"PROJ-3188\",\n \"PROJ-3192\",\n \"PROJ-3171\",\n \"PROJ-3110\",\n \"PROJ-3134\",\n \"PROJ-3178\",\n \"PROJ-3163\",\n \"PROJ-3162\",\n \"PROJ-3122\",\n \"PROJ-3120\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -129,7 +138,7 @@
    {
     "column_name": "Post-Cotizacion",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3094\",\n \"PROJ-3115\",\n \"PROJ-3036\",\n \"PROJ-3053\",\n \"PROJ-3067\",\n \"PROJ-3063\",\n \"PROJ-3076\",\n \"PROJ-3003\",\n \"PROJ-3098\",\n \"PROJ-3123\",\n \"PROJ-3044\",\n \"PROJ-3114\",\n \"PROJ-3091\",\n \"PROJ-3039\",\n \"PROJ-3014\",\n \"PROJ-3069\",\n \"PROJ-3020\",\n \"PROJ-3097\",\n \"PROJ-3055\",\n \"PROJ-3000\",\n \"PROJ-3007\"\n]",
+    "order": "[\n \"PROJ-3185\",\n \"PROJ-3019\",\n \"PROJ-3014\",\n \"PROJ-3161\",\n \"PROJ-3129\",\n \"PROJ-3036\",\n \"PROJ-3003\",\n \"PROJ-3155\",\n \"PROJ-3114\",\n \"PROJ-3149\",\n \"PROJ-3126\",\n \"PROJ-3130\",\n \"PROJ-3143\",\n \"PROJ-3167\",\n \"PROJ-3165\",\n \"PROJ-3125\",\n \"PROJ-3156\",\n \"PROJ-3141\",\n \"PROJ-3128\",\n \"PROJ-3109\",\n \"PROJ-3124\",\n \"PROJ-3065\",\n \"PROJ-3133\",\n \"PROJ-3100\",\n \"PROJ-3144\",\n \"PROJ-3150\",\n \"PROJ-3140\",\n \"PROJ-3146\",\n \"PROJ-3127\",\n \"PROJ-3104\",\n \"PROJ-3022\",\n \"PROJ-3115\",\n \"PROJ-3053\",\n \"PROJ-3067\",\n \"PROJ-3063\",\n \"PROJ-3098\",\n \"PROJ-3091\",\n \"PROJ-3039\",\n \"PROJ-3069\",\n \"PROJ-3020\",\n \"PROJ-3097\",\n \"PROJ-3055\",\n \"PROJ-3000\",\n \"PROJ-3007\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -138,7 +147,7 @@
    {
     "column_name": "Levantamiento",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3174\",\n \"PROJ-3123\",\n \"PROJ-3132\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -156,7 +165,7 @@
    {
     "column_name": "Diseño",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3126\",\n \"PROJ-3065\"\n]",
+    "order": "[\n \"PROJ-3145\",\n \"PROJ-3108\",\n \"PROJ-3198\",\n \"PROJ-3197\",\n \"PROJ-3151\",\n \"PROJ-3182\",\n \"PROJ-3177\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -165,7 +174,7 @@
    {
     "column_name": "Guia de Trabajo",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3073\",\n \"PROJ-3090\"\n]",
+    "order": "[]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -174,7 +183,7 @@
    {
     "column_name": "Revision de Archivos",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3016\"\n]",
+    "order": "[\n \"PROJ-3191\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -183,7 +192,7 @@
    {
     "column_name": "Lista de Materiales",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3128\",\n \"PROJ-3132\",\n \"PROJ-3050\",\n \"PROJ-3136\",\n \"PROJ-3133\",\n \"PROJ-3127\",\n \"PROJ-3015\",\n \"PROJ-3032\",\n \"PROJ-3109\",\n \"PROJ-3121\",\n \"PROJ-3104\",\n \"PROJ-3110\",\n \"PROJ-3100\"\n]",
+    "order": "[\n \"PROJ-3015\",\n \"PROJ-3137\",\n \"PROJ-3193\",\n \"PROJ-3157\",\n \"PROJ-3176\",\n \"PROJ-3138\",\n \"PROJ-3196\",\n \"PROJ-3160\",\n \"PROJ-3168\",\n \"PROJ-3189\",\n \"PROJ-3154\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -192,7 +201,7 @@
    {
     "column_name": "Cotizacion",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3019\"\n]",
+    "order": "[\n \"PROJ-3184\",\n \"PROJ-3195\",\n \"PROJ-3131\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -201,7 +210,7 @@
    {
     "column_name": "Cotizacion Aprobada",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3044\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -210,7 +219,7 @@
    {
     "column_name": "Orden de Venta",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3120\",\n \"PROJ-3111\",\n \"PROJ-3106\",\n \"PROJ-3112\",\n \"PROJ-3057\",\n \"PROJ-3018\",\n \"PROJ-3005\",\n \"PROJ-3072\",\n \"PROJ-3095\",\n \"PROJ-3093\",\n \"PROJ-3101\",\n \"PROJ-3119\",\n \"PROJ-3056\"\n]",
+    "order": "[\n \"PROJ-3183\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -219,7 +228,7 @@
    {
     "column_name": "Muestras de Color",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3138\"\n]",
+    "order": "[]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -228,7 +237,7 @@
    {
     "column_name": "Pendiente Orden de Trabajo",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3042\",\n \"PROJ-3008\",\n \"PROJ-3060\",\n \"PROJ-3031\",\n \"PROJ-3028\",\n \"PROJ-3026\",\n \"PROJ-3074\",\n \"PROJ-3059\"\n]",
+    "order": "[\n \"PROJ-3173\",\n \"PROJ-3148\",\n \"PROJ-3181\",\n \"PROJ-3046\",\n \"PROJ-3008\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -237,7 +246,7 @@
    {
     "column_name": "Orden de Trabajo",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3010\",\n \"PROJ-3049\",\n \"PROJ-3071\",\n \"PROJ-3033\",\n \"PROJ-3035\",\n \"PROJ-3068\",\n \"PROJ-3099\",\n \"PROJ-3103\",\n \"PROJ-3017\",\n \"PROJ-3075\",\n \"PROJ-3004\",\n \"PROJ-3052\",\n \"PROJ-3012\",\n \"PROJ-3002\",\n \"PROJ-3083\",\n \"PROJ-3001\"\n]",
+    "order": "[\n \"PROJ-3076\",\n \"PROJ-3058\",\n \"PROJ-3121\",\n \"PROJ-3095\",\n \"PROJ-3072\",\n \"PROJ-3001\",\n \"PROJ-3045\",\n \"PROJ-3166\",\n \"PROJ-3093\",\n \"PROJ-3073\",\n \"PROJ-3158\",\n \"PROJ-3016\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -246,7 +255,7 @@
    {
     "column_name": "Factura de Venta",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3086\",\n \"PROJ-3078\",\n \"PROJ-3082\",\n \"PROJ-3084\",\n \"PROJ-3077\",\n \"PROJ-3085\"\n]",
+    "order": "[\n \"PROJ-3012\",\n \"PROJ-3050\",\n \"PROJ-3052\",\n \"PROJ-3186\",\n \"PROJ-3105\",\n \"PROJ-3112\",\n \"PROJ-3101\",\n \"PROJ-3111\",\n \"PROJ-3032\",\n \"PROJ-3071\",\n \"PROJ-3169\",\n \"PROJ-3083\",\n \"PROJ-3077\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -255,7 +264,7 @@
    {
     "column_name": "Nota de Entrega",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3070\",\n \"PROJ-3118\",\n \"PROJ-3037\",\n \"PROJ-3030\",\n \"PROJ-3009\",\n \"PROJ-3047\"\n]",
+    "order": "[\n \"PROJ-3047\",\n \"PROJ-3009\",\n \"PROJ-3070\",\n \"PROJ-3118\",\n \"PROJ-3037\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -264,7 +273,7 @@
    {
     "column_name": "Completado",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3040\",\n \"PROJ-3117\",\n \"PROJ-3006\",\n \"PROJ-3089\",\n \"PROJ-3102\",\n \"PROJ-3087\",\n \"PROJ-3080\",\n \"PROJ-3081\",\n \"PROJ-3079\",\n \"PROJ-3024\",\n \"PROJ-3027\"\n]",
+    "order": "[\n \"PROJ-3042\",\n \"PROJ-3005\",\n \"PROJ-3064\",\n \"PROJ-3004\",\n \"PROJ-3090\",\n \"PROJ-3002\",\n \"PROJ-3164\",\n \"PROJ-3172\",\n \"PROJ-3094\",\n \"PROJ-3057\",\n \"PROJ-3116\",\n \"PROJ-3106\",\n \"PROJ-3152\",\n \"PROJ-3136\",\n \"PROJ-3139\",\n \"PROJ-3025\",\n \"PROJ-3018\",\n \"PROJ-3060\",\n \"PROJ-3082\",\n \"PROJ-3066\",\n \"PROJ-3026\",\n \"PROJ-3119\",\n \"PROJ-3159\",\n \"PROJ-3135\",\n \"PROJ-3033\",\n \"PROJ-3074\",\n \"PROJ-3049\",\n \"PROJ-3013\",\n \"PROJ-3011\",\n \"PROJ-3061\",\n \"PROJ-3054\",\n \"PROJ-3062\",\n \"PROJ-3078\",\n \"PROJ-3086\",\n \"PROJ-3085\",\n \"PROJ-3103\",\n \"PROJ-3056\",\n \"PROJ-3028\",\n \"PROJ-3031\",\n \"PROJ-3010\",\n \"PROJ-3099\",\n \"PROJ-3017\",\n \"PROJ-3059\",\n \"PROJ-3068\",\n \"PROJ-3035\",\n \"PROJ-3084\",\n \"PROJ-3075\",\n \"PROJ-3030\",\n \"PROJ-3006\",\n \"PROJ-3034\",\n \"PROJ-3029\",\n \"PROJ-3092\",\n \"PROJ-3023\",\n \"PROJ-3043\",\n \"PROJ-3048\",\n \"PROJ-3107\",\n \"PROJ-3117\",\n \"PROJ-3040\",\n \"PROJ-3089\",\n \"PROJ-3102\",\n \"PROJ-3087\",\n \"PROJ-3080\",\n \"PROJ-3081\",\n \"PROJ-3079\",\n \"PROJ-3024\",\n \"PROJ-3027\"\n]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -273,7 +282,7 @@
    {
     "column_name": "Manuel Tolentino",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3025\",\n \"PROJ-3034\",\n \"PROJ-3029\",\n \"PROJ-3092\",\n \"PROJ-3023\",\n \"PROJ-3043\",\n \"PROJ-3048\",\n \"PROJ-3107\",\n \"PROJ-3066\",\n \"PROJ-3062\",\n \"PROJ-3064\",\n \"PROJ-3105\",\n \"PROJ-3054\",\n \"PROJ-3061\",\n \"PROJ-3013\",\n \"PROJ-3011\"\n]",
+    "order": "[]",
     "parent": "Departamento Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -299,7 +308,7 @@
    {
     "column_name": "Pendientes",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3025\",\n \"PROJ-3034\",\n \"PROJ-3029\",\n \"PROJ-3092\",\n \"PROJ-3023\",\n \"PROJ-3043\",\n \"PROJ-3048\",\n \"PROJ-3107\",\n \"PROJ-3042\",\n \"PROJ-3010\",\n \"PROJ-3066\",\n \"PROJ-3019\",\n \"PROJ-3049\",\n \"PROJ-3071\",\n \"PROJ-3033\",\n \"PROJ-3035\",\n \"PROJ-3068\",\n \"PROJ-3099\",\n \"PROJ-3103\",\n \"PROJ-3060\",\n \"PROJ-3028\",\n \"PROJ-3026\",\n \"PROJ-3017\",\n \"PROJ-3075\",\n \"PROJ-3062\",\n \"PROJ-3054\",\n \"PROJ-3061\",\n \"PROJ-3013\",\n \"PROJ-3011\",\n \"PROJ-3059\",\n \"PROJ-3004\",\n \"PROJ-3052\",\n \"PROJ-3012\",\n \"PROJ-3002\",\n \"PROJ-3083\",\n \"PROJ-3006\",\n \"PROJ-3001\",\n \"PROJ-3009\",\n \"PROJ-3047\"\n]",
+    "order": "[\n \"PROJ-3076\",\n \"PROJ-3173\",\n \"PROJ-3148\",\n \"PROJ-3181\",\n \"PROJ-3046\",\n \"PROJ-3158\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -308,7 +317,7 @@
    {
     "column_name": "Lunes",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3058\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -326,7 +335,7 @@
    {
     "column_name": "Miercoles",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3072\",\n \"PROJ-3016\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -335,7 +344,7 @@
    {
     "column_name": "Jueves",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3095\",\n \"PROJ-3093\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -344,7 +353,7 @@
    {
     "column_name": "Viernes",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3121\",\n \"PROJ-3045\",\n \"PROJ-3166\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -353,7 +362,7 @@
    {
     "column_name": "Sabado",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3168\",\n \"PROJ-3073\"\n]",
     "parent": "Planificacion Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -379,7 +388,7 @@
    {
     "column_name": "Pendiente",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3025\",\n \"PROJ-3034\",\n \"PROJ-3029\",\n \"PROJ-3092\",\n \"PROJ-3023\",\n \"PROJ-3138\",\n \"PROJ-3043\",\n \"PROJ-3048\",\n \"PROJ-3107\",\n \"PROJ-3120\",\n \"PROJ-3122\",\n \"PROJ-3116\",\n \"PROJ-3073\",\n \"PROJ-3139\",\n \"PROJ-3042\",\n \"PROJ-3128\",\n \"PROJ-3132\",\n \"PROJ-3111\",\n \"PROJ-3010\",\n \"PROJ-3066\",\n \"PROJ-3137\",\n \"PROJ-3019\",\n \"PROJ-3126\",\n \"PROJ-3136\",\n \"PROJ-3135\",\n \"PROJ-3008\",\n \"PROJ-3035\",\n \"PROJ-3068\",\n \"PROJ-3099\",\n \"PROJ-3103\",\n \"PROJ-3112\",\n \"PROJ-3060\",\n \"PROJ-3134\",\n \"PROJ-3133\",\n \"PROJ-3127\",\n \"PROJ-3028\",\n \"PROJ-3026\",\n \"PROJ-3129\",\n \"PROJ-3109\",\n \"PROJ-3117\",\n \"PROJ-3119\",\n \"PROJ-3115\",\n \"PROJ-3017\",\n \"PROJ-3075\",\n \"PROJ-3062\",\n \"PROJ-3054\",\n \"PROJ-3061\",\n \"PROJ-3013\",\n \"PROJ-3011\",\n \"PROJ-3108\",\n \"PROJ-3121\",\n \"PROJ-3131\",\n \"PROJ-3130\",\n \"PROJ-3118\",\n \"PROJ-3059\",\n \"PROJ-3004\",\n \"PROJ-3052\",\n \"PROJ-3012\",\n \"PROJ-3002\",\n \"PROJ-3083\",\n \"PROJ-3006\",\n \"PROJ-3125\",\n \"PROJ-3124\",\n \"PROJ-3110\",\n \"PROJ-3123\",\n \"PROJ-3114\",\n \"PROJ-3113\",\n \"PROJ-3009\",\n \"PROJ-3047\"\n]",
+    "order": "[\n \"PROJ-3076\",\n \"PROJ-3173\",\n \"PROJ-3058\",\n \"PROJ-3148\",\n \"PROJ-3121\",\n \"PROJ-3019\",\n \"PROJ-3181\",\n \"PROJ-3046\",\n \"PROJ-3045\",\n \"PROJ-3166\",\n \"PROJ-3093\",\n \"PROJ-3073\",\n \"PROJ-3158\",\n \"PROJ-3016\",\n \"PROJ-3008\"\n]",
     "parent": "Almacen Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -388,7 +397,7 @@
    {
     "column_name": "Solicitud de materiales",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3095\",\n \"PROJ-3072\"\n]",
     "parent": "Almacen Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -397,7 +406,7 @@
    {
     "column_name": "En proceso",
     "indicator": "Gray",
-    "order": "[\n \"PROJ-3049\",\n \"PROJ-3071\",\n \"PROJ-3033\",\n \"PROJ-3001\"\n]",
+    "order": "[]",
     "parent": "Almacen Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
@@ -406,7 +415,7 @@
    {
     "column_name": "Entregado",
     "indicator": "Gray",
-    "order": "[]",
+    "order": "[\n \"PROJ-3047\",\n \"PROJ-3009\",\n \"PROJ-3105\",\n \"PROJ-3112\",\n \"PROJ-3101\",\n \"PROJ-3111\",\n \"PROJ-3042\",\n \"PROJ-3005\",\n \"PROJ-3064\",\n \"PROJ-3004\",\n \"PROJ-3090\",\n \"PROJ-3002\",\n \"PROJ-3164\",\n \"PROJ-3172\",\n \"PROJ-3094\",\n \"PROJ-3057\",\n \"PROJ-3116\",\n \"PROJ-3106\",\n \"PROJ-3152\",\n \"PROJ-3136\",\n \"PROJ-3139\",\n \"PROJ-3025\",\n \"PROJ-3018\",\n \"PROJ-3060\",\n \"PROJ-3082\",\n \"PROJ-3066\",\n \"PROJ-3026\",\n \"PROJ-3119\",\n \"PROJ-3159\",\n \"PROJ-3135\",\n \"PROJ-3033\",\n \"PROJ-3074\",\n \"PROJ-3049\",\n \"PROJ-3013\",\n \"PROJ-3011\",\n \"PROJ-3061\",\n \"PROJ-3054\",\n \"PROJ-3062\",\n \"PROJ-3078\",\n \"PROJ-3086\",\n \"PROJ-3085\",\n \"PROJ-3103\",\n \"PROJ-3056\",\n \"PROJ-3028\",\n \"PROJ-3031\",\n \"PROJ-3010\",\n \"PROJ-3099\",\n \"PROJ-3017\",\n \"PROJ-3059\",\n \"PROJ-3068\",\n \"PROJ-3035\",\n \"PROJ-3084\",\n \"PROJ-3075\",\n \"PROJ-3006\",\n \"PROJ-3034\",\n \"PROJ-3029\",\n \"PROJ-3092\",\n \"PROJ-3023\",\n \"PROJ-3043\",\n \"PROJ-3048\",\n \"PROJ-3107\",\n \"PROJ-3117\",\n \"PROJ-3040\",\n \"PROJ-3089\",\n \"PROJ-3102\",\n \"PROJ-3024\",\n \"PROJ-3027\"\n]",
     "parent": "Almacen Kanban",
     "parentfield": "columns",
     "parenttype": "Kanban Board",
