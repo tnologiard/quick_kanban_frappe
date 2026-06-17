@@ -27,9 +27,7 @@
                     @error="onImgError"
                     :style="{
                         width: '100%',
-                        height: '130px',
-                        objectFit: 'cover',
-                        objectPosition: 'center',
+                        height: 'auto',
                         display: 'block',
                         borderRadius: '6px',
                     }"
