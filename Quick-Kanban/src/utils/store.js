@@ -287,9 +287,9 @@ const store = createStore({
                     const card = transformCard(keys, c, userInfoLookup);
 
                     // Se quitan de la planificacion los proyectos Completados/Cancelados
-                    // o cuyo departamento ya esta en "Completado".
+                    // o cuyo departamento esta en "Completado" o "Manuel Tolentino".
                     if (['Completed', 'Cancelled'].includes(card.status)) return;
-                    if (card.custom_departamento_kanban === 'Completado') return;
+                    if (['Completado', 'Manuel Tolentino'].includes(card.custom_departamento_kanban)) return;
 
                     card.tags = allTags[card.name] || [];
                     card.notas = allNotas[card.name] || [];
