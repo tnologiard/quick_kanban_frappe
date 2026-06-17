@@ -224,6 +224,7 @@ const store = createStore({
                 'custom_nombre_vendedor',
                 'custom_nombre_diseñador',
                 'project_type',
+                'status',
                 PLANNING_DATE_FIELD,
             ];
             needed.forEach((f) => {
@@ -283,6 +284,10 @@ const store = createStore({
                 const byDate = {};
                 board.values.forEach((c) => {
                     const card = transformCard(keys, c, userInfoLookup);
+
+                    // Los proyectos Completados o Cancelados se quitan de la planificacion
+                    if (['Completed', 'Cancelled'].includes(card.status)) return;
+
                     card.tags = allTags[card.name] || [];
                     card.notas = allNotas[card.name] || [];
                     card._boardColor = allColors[card.name] || 'Gris';
