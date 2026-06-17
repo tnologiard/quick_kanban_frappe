@@ -133,6 +133,24 @@ doctype_js = {"Kanban Board" : "public/js/kanban_highlight.js",
 # 	}
 # }
 
+doc_events = {
+    "Project": {
+        "validate": [
+            "quick_kanban.api.protect_colores_tablero",
+            "quick_kanban.tasks.stamp_departamento_entrada",
+        ]
+    }
+}
+
+scheduler_events = {
+    "cron": {
+        # cada 15 minutos (los tiempos ahora son en horas/minutos)
+        "*/15 * * * *": [
+            "quick_kanban.tasks.marcar_vencidos_departamento"
+        ]
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 
@@ -235,7 +253,7 @@ fixtures = [
     {
         "dt": "Kanban Board",
         "filters": [
-            ["name", "in", ["Departamento Kanban", "Almacen Kanban", "Planificacion Kanban", "Tarjeta de Trabajo Departamento"]]
+            ["name", "in", ["Departamento Kanban", "Almacen Kanban", "Planificacion Kanban", "Planificacion Mensual", "Departamento Vencidos", "Tarjeta de Trabajo Departamento"]]
         ]
     },
     {

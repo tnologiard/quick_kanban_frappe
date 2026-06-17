@@ -1,13 +1,42 @@
 <template>
-  <div class="kanban" ref="kanbanBoard">
-    <KanbanColumn
-      v-for="(column, columnIndex) in columns"
-      :key="column.name"
-      :column="column"
-      :columnIndex="columnIndex"
-      :config="config"
-      @drop="drop"
-    />
+  <div class="kanban-wrapper">
+    <!-- Barra de seleccion de mes (solo tablero de Planificacion) -->
+    <div v-if="planning.active" class="planning-toolbar">
+      <button class="btn btn-default btn-sm" @click="prevMonth">&#8249;</button>
+      <select class="planning-select" :value="planning.month" @change="onMonthChange">
+        <option v-for="(m, i) in monthNames" :key="i" :value="i">{{ m }}</option>
+      </select>
+      <input
+        class="planning-year"
+        type="number"
+        :value="planning.year"
+        @change="onYearChange"
+      />
+      <button class="btn btn-default btn-sm" @click="nextMonth">&#8250;</button>
+      <button class="btn btn-default btn-sm" @click="goToday">Hoy</button>
+      <span class="planning-label">{{ monthNames[planning.month] }} {{ planning.year }}</span>
+      <span class="planning-spacer"></span>
+      <button class="btn btn-default btn-sm" @click="expandAll(true)" title="Mostrar detalles de todas">Expandir todas</button>
+      <button class="btn btn-default btn-sm" @click="expandAll(false)" title="Colapsar todas">Colapsar todas</button>
+    </div>
+
+    <!-- Barra de expandir/colapsar para los demas tableros de Project -->
+    <div v-else-if="featuresOn" class="planning-toolbar">
+      <span class="planning-spacer"></span>
+      <button class="btn btn-default btn-sm" @click="expandAll(true)" title="Mostrar detalles de todas">Expandir todas</button>
+      <button class="btn btn-default btn-sm" @click="expandAll(false)" title="Colapsar todas">Colapsar todas</button>
+    </div>
+
+    <div class="kanban" ref="kanbanBoard">
+      <KanbanColumn
+        v-for="(column, columnIndex) in columns"
+        :key="column.name"
+        :column="column"
+        :columnIndex="columnIndex"
+        :config="config"
+        @drop="drop"
+      />
+    </div>
   </div>
 </template>
 
@@ -19,12 +48,20 @@ import KanbanColumn from "./KanbanColumn.vue";
 const store = useStore();
 const columns = computed(() => store.getters.getColumns);
 const config = computed(() => store.getters.getConfig);
+const planning = computed(() => store.getters.getPlanning);
+const featuresOn = computed(() => config.value && config.value.ref_doctype === 'Project');
 const kanbanBoard = ref(null);
+
+const monthNames = [
+  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+];
 
 const board_name = frappe.get_route()[3];
 
 onMounted(() => {
   window.refreshKanbanBoard = refreshKanbanBoard;
+  store.dispatch("fetchCanEditColor");
   refreshKanbanBoard();
   bindClickDrag();
 });
@@ -37,10 +74,40 @@ const refreshKanbanBoard = (args) => {
   store
     .dispatch("fetchColumns", { board_name })
     .then(() => {
+      if (store.getters.getPlanning.active) {
+        return store.dispatch("fetchPlanning", { args });
+      }
       return store.dispatch("fetchKanban", { args });
     })
     .catch((error) => console.error("Error during Kanban setup:", error));
 };
+
+// ---- Controles del selector de mes ----
+function prevMonth() {
+  store.dispatch("changeMonth", { delta: -1 });
+}
+function nextMonth() {
+  store.dispatch("changeMonth", { delta: 1 });
+}
+function onMonthChange(e) {
+  store.dispatch("setPeriod", {
+    month: parseInt(e.target.value, 10),
+    year: planning.value.year,
+  });
+}
+function onYearChange(e) {
+  store.dispatch("setPeriod", {
+    month: planning.value.month,
+    year: parseInt(e.target.value, 10),
+  });
+}
+function goToday() {
+  const now = new Date();
+  store.dispatch("setPeriod", { month: now.getMonth(), year: now.getFullYear() });
+}
+function expandAll(value) {
+  store.dispatch("setAllExpanded", { value });
+}
 
 function drop(event) {
   const evt = event.event;
@@ -73,7 +140,7 @@ function drop(event) {
 
     // // // Esto asegura que Vue detecte el cambio
     // col.cards = [...col.cards];
-    
+
     // Recargar doc si es el actual
     if (window.cur_frm && cur_frm.doc.name === card.name) {
       cur_frm.reload_doc();
@@ -136,3 +203,32 @@ const unbindClickDrag = () => {
   draggable.removeEventListener("mousemove", onMouseMove);
 };
 </script>
+
+<style scoped>
+.planning-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  flex-wrap: wrap;
+}
+.planning-select,
+.planning-year {
+  height: 28px;
+  border: 1px solid var(--border-color, #d1d8dd);
+  border-radius: 6px;
+  padding: 0 8px;
+  background: var(--fg-color, #fff);
+}
+.planning-year {
+  width: 80px;
+}
+.planning-label {
+  font-weight: 600;
+  margin-left: 4px;
+  text-transform: capitalize;
+}
+.planning-spacer {
+  flex: 1;
+}
+</style>

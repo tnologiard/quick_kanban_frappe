@@ -47,7 +47,7 @@
             </div>
           </li>
         </ul>
-        <div class="header-item" @click="newDoc(column.column_name)">
+        <div class="header-item" @click="newDoc()">
           <svg class="icon icon-sm" style="" aria-hidden="true">
             <use class="" href="#icon-add"></use>
           </svg>
@@ -78,7 +78,7 @@
       <template #footer>
         <div class="addcard">
           <button
-            @click="newDoc(column.column_name)"
+            @click="newDoc()"
             class="btn btn-default btn-sm w-100"
             :data-label="'Add ' + config.ref_doctype"
           >
@@ -125,9 +125,19 @@ function drop(evt) {
   emits("drop", evt);
 }
 
-function newDoc(field) {
+function newDoc() {
   const args = window.cur_list.get_args();
-  frappe.new_doc(args.doctype, { [props.config.field_name]: field });
+  const planning = store.getters.getPlanning;
+  if (planning.active) {
+    // En modo planificacion, crear el proyecto con la fecha de la columna
+    const dateStr = props.column.dateStr;
+    frappe.new_doc(
+      args.doctype,
+      dateStr ? { custom_date_planificacion: dateStr } : {}
+    );
+  } else {
+    frappe.new_doc(args.doctype, { [props.config.field_name]: props.column.column_name });
+  }
 }
 
 function getColumnStyle(columnIndicator) {

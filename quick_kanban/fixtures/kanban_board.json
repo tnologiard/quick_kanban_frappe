@@ -471,5 +471,264 @@
   "private": 0,
   "reference_doctype": "Project",
   "show_labels": 0
+ },
+ {
+  "columns": [
+   {
+    "column_name": "Pendientes",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Planificacion Mensual",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   }
+  ],
+  "custom_highlight_table": [],
+  "custom_highlighted_field": null,
+  "docstatus": 0,
+  "doctype": "Kanban Board",
+  "field_name": "custom_planificacion_kanban",
+  "fields": null,
+  "filters": null,
+  "kanban_board_name": "Planificacion Mensual",
+  "modified": "2026-06-15 16:00:00.000000",
+  "name": "Planificacion Mensual",
+  "private": 0,
+  "reference_doctype": "Project",
+  "show_labels": 0
+ },
+ {
+  "columns": [
+   {
+    "column_name": "Pre-Ventas",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Ventas",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Post-Cotizacion",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Levantamiento",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Asignacion diseñador",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Diseño",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Guia de Trabajo",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Revision de Archivos",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Lista de Materiales",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Validacion BOM",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Cotizacion",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Cotizacion Aprobada",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Orden de Venta",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Muestras de Color",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Pendiente Orden de Trabajo",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Orden de Trabajo",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Completada Orden de Trabajo",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Factura de Venta",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Nota de Entrega",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Completado",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Cancelado",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Garantia",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Donaciones",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   },
+   {
+    "column_name": "Manuel Tolentino",
+    "indicator": "Gray",
+    "order": "[]",
+    "parent": "Departamento Vencidos",
+    "parentfield": "columns",
+    "parenttype": "Kanban Board",
+    "status": "Active"
+   }
+  ],
+  "custom_highlight_table": [],
+  "custom_highlighted_field": null,
+  "docstatus": 0,
+  "doctype": "Kanban Board",
+  "field_name": "custom_vencidos_kanban",
+  "fields": null,
+  "filters": null,
+  "kanban_board_name": "Departamento Vencidos",
+  "modified": "2026-06-17 10:00:00.000000",
+  "name": "Departamento Vencidos",
+  "private": 0,
+  "reference_doctype": "Project",
+  "show_labels": 0
  }
 ]

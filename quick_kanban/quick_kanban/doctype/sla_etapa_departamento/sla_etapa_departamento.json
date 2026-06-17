@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-17 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "etapa",
+  "tiempo_max"
+ ],
+ "fields": [
+  {
+   "fieldname": "etapa",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Etapa",
+   "options": "\nPre-Ventas\nVentas\nPost-Cotizacion\nLevantamiento\nAsignacion diseñador\nDiseño\nGuia de Trabajo\nRevision de Archivos\nLista de Materiales\nValidacion BOM\nCotizacion\nCotizacion Aprobada\nOrden de Venta\nMuestras de Color\nPendiente Orden de Trabajo\nOrden de Trabajo\nCompletada Orden de Trabajo\nFactura de Venta\nNota de Entrega\nCompletado\nCancelado\nGarantia\nDonaciones\nManuel Tolentino",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tiempo_max",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Tiempo máximo (h:m)",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quick-Kanban",
+ "name": "SLA Etapa Departamento",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,4 +1,14 @@
 frappe.ui.form.on('Project', {
+    refresh: function(frm) {
+        // La tabla de colores por tablero solo es editable por quien tenga el permiso.
+        frappe.call({
+            method: 'quick_kanban.api.can_edit_color',
+            callback: function(r) {
+                const can = !!(r && r.message);
+                frm.set_df_property('custom_colores_tablero', 'read_only', can ? 0 : 1);
+            }
+        });
+    },
     custom_imagen_portada: function(frm) {
         const allowed = ['png', 'jpg', 'jpeg']; // extensiones permitidas
         const file_url = frm.doc.custom_imagen_portada;

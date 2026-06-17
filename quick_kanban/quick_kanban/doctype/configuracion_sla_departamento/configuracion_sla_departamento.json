@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-06-17 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activo",
+  "sb_horario",
+  "hora_inicio",
+  "hora_fin",
+  "tiene_almuerzo",
+  "almuerzo_inicio",
+  "almuerzo_fin",
+  "lista_feriados",
+  "sb_dias",
+  "lunes",
+  "martes",
+  "miercoles",
+  "cb_dias",
+  "jueves",
+  "viernes",
+  "sabado",
+  "domingo",
+  "sb_etapas",
+  "etapas"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "activo",
+   "fieldtype": "Check",
+   "label": "Activo"
+  },
+  {
+   "fieldname": "sb_horario",
+   "fieldtype": "Section Break",
+   "label": "Horario laborable"
+  },
+  {
+   "default": "08:00:00",
+   "fieldname": "hora_inicio",
+   "fieldtype": "Time",
+   "label": "Hora de inicio"
+  },
+  {
+   "default": "17:00:00",
+   "fieldname": "hora_fin",
+   "fieldtype": "Time",
+   "label": "Hora de fin"
+  },
+  {
+   "default": "1",
+   "fieldname": "tiene_almuerzo",
+   "fieldtype": "Check",
+   "label": "Descontar almuerzo"
+  },
+  {
+   "default": "12:00:00",
+   "depends_on": "tiene_almuerzo",
+   "fieldname": "almuerzo_inicio",
+   "fieldtype": "Time",
+   "label": "Almuerzo - inicio"
+  },
+  {
+   "default": "13:00:00",
+   "depends_on": "tiene_almuerzo",
+   "fieldname": "almuerzo_fin",
+   "fieldtype": "Time",
+   "label": "Almuerzo - fin"
+  },
+  {
+   "description": "Opcional: si la elegís, los feriados de esa lista no se cuentan.",
+   "fieldname": "lista_feriados",
+   "fieldtype": "Link",
+   "label": "Lista de feriados",
+   "options": "Holiday List"
+  },
+  {
+   "fieldname": "sb_dias",
+   "fieldtype": "Section Break",
+   "label": "Días laborables"
+  },
+  {
+   "default": "1",
+   "fieldname": "lunes",
+   "fieldtype": "Check",
+   "label": "Lunes"
+  },
+  {
+   "default": "1",
+   "fieldname": "martes",
+   "fieldtype": "Check",
+   "label": "Martes"
+  },
+  {
+   "default": "1",
+   "fieldname": "miercoles",
+   "fieldtype": "Check",
+   "label": "Miércoles"
+  },
+  {
+   "fieldname": "cb_dias",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "jueves",
+   "fieldtype": "Check",
+   "label": "Jueves"
+  },
+  {
+   "default": "1",
+   "fieldname": "viernes",
+   "fieldtype": "Check",
+   "label": "Viernes"
+  },
+  {
+   "default": "0",
+   "fieldname": "sabado",
+   "fieldtype": "Check",
+   "label": "Sábado"
+  },
+  {
+   "default": "0",
+   "fieldname": "domingo",
+   "fieldtype": "Check",
+   "label": "Domingo"
+  },
+  {
+   "fieldname": "sb_etapas",
+   "fieldtype": "Section Break",
+   "label": "Tiempos máximos por etapa"
+  },
+  {
+   "fieldname": "etapas",
+   "fieldtype": "Table",
+   "label": "Tiempos máximos por etapa",
+   "options": "SLA Etapa Departamento"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-06-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quick-Kanban",
+ "name": "Configuracion SLA Departamento",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
