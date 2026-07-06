@@ -57,8 +57,6 @@ const monthNames = [
   "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
 ];
 
-const board_name = frappe.get_route()[3];
-
 onMounted(() => {
   window.refreshKanbanBoard = refreshKanbanBoard;
   store.dispatch("fetchCanEditColor");
@@ -71,6 +69,9 @@ onBeforeUnmount(() => {
 });
 
 const refreshKanbanBoard = (args) => {
+  // Releer el tablero desde la ruta en cada carga: asi al cambiar de un tablero a
+  // otro (ambos de Project) se actualiza al tablero correcto y no queda el anterior.
+  const board_name = frappe.get_route()[3];
   store
     .dispatch("fetchColumns", { board_name })
     .then(() => {

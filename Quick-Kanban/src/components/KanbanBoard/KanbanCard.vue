@@ -195,11 +195,24 @@ const props = defineProps({
     columnIndex: Number
 });
 
-// ---- Imagen de portada (codifica espacios/comas del nombre de archivo) ----
-const DEFAULT_IMG = '/files/default_project_image.jpg';
+// ---- Imagen de portada ----
+// Placeholder "Sin imagen" embebido (SVG): no depende de ningún archivo, así que
+// nunca queda el ícono roto si la imagen falta, no existe o da error.
+const PLACEHOLDER_SVG =
+    "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='220'>" +
+    "<rect width='100%' height='100%' fill='#eef1f5'/>" +
+    "<g fill='none' stroke='#b7c0cd' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'>" +
+    "<rect x='150' y='66' width='100' height='80' rx='8'/>" +
+    "<circle cx='176' cy='92' r='9'/>" +
+    "<path d='M155 142 l28 -26 22 18 26 -22 19 15'/></g>" +
+    "<text x='200' y='184' font-family='sans-serif' font-size='17' fill='#9aa6b2' text-anchor='middle'>Sin imagen</text>" +
+    "</svg>";
+const DEFAULT_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(PLACEHOLDER_SVG);
+
 const imgSrc = computed(() => {
     const u = props.card.custom_imagen_portada;
-    if (!u) return DEFAULT_IMG;
+    // Sin imagen, o la imagen "por defecto" vieja = mostrar el placeholder SVG
+    if (!u || u.includes('default_project_image')) return DEFAULT_IMG;
     try {
         // Si ya viene codificada (tiene %), no la vuelvo a codificar
         return /%[0-9A-Fa-f]{2}/.test(u) ? u : encodeURI(u);
@@ -208,10 +221,11 @@ const imgSrc = computed(() => {
     }
 });
 function onImgError(e) {
-    // Si la imagen no carga (archivo movido/privado), muestro la de por defecto
-    if (e && e.target && e.target.src && !e.target.src.includes('default_project_image')) {
-        e.target.src = DEFAULT_IMG;
-    }
+    // Si la imagen no carga (no existe / privada / error), mostrar el placeholder.
+    const img = e && e.target;
+    if (!img || img.dataset.fallback) return; // evita bucle
+    img.dataset.fallback = "1";
+    img.src = DEFAULT_IMG;
 }
 
 // ---- Colores / objetivos de la tarjeta (independiente por tablero) ----
